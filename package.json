@@ -1,0 +1,25 @@
+{
+  "name": "beryl_reactlesson",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ipropberylfoo/beryl_reactlesson.git",
+  "author": "beryl <berylfoo@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "lint": "eslint ./src"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.7.1",
+    "eslint-plugin-react": "^7.0.1",
+    "webpack": "2.6.1"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "express": "^4.15.3",
+    "save": "^2.3.0"
+  }
+}
