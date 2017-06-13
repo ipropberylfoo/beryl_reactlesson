@@ -3,8 +3,16 @@ import {render} from 'react-dom';
 
 class App extends React.Component {
   render() {
-    return (<p> Hello React!</p>);
+    return (
+      <html>
+        <head>
+        </head>
+        <body>
+          <p>Hello {this.props.username}</p>
+        </body>
+      </html>
+    );
   }
 }
 
-render(<App/>, document.getElementById('app'));
+ module.exports = App;
