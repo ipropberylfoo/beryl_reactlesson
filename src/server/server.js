@@ -18,16 +18,16 @@ app.set('views','./src/client');
 
 
 
-app.get('/here',function(req,res){
-    res.send('Hello world');
-});
+//app.get('/here',function(req,res){
+//    res.send('Hello world');
+//});
 
-app.get('/index/:username',function(req,res){
+app.get('/:username',function(req,res){
     console.log('here -> ' + req.params.username);
     res.render('./public/index.jsx', {
       username : req.params.username
     });
 });
-app.get('/index',function(req,res){
+app.get('/',function(req,res){
     res.render('./public/index.jsx');
 });
