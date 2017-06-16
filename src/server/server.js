@@ -9,6 +9,8 @@ var server = app.listen(3000,function(){
 });
 var reactViews = require('express-react-views');
 
+var accountModule  = require('../routes/account');
+
 app.set('view engine', 'jsx');
 app.engine('jsx', reactViews.createEngine());
 
@@ -21,6 +23,7 @@ app.set('views','./src/client');
 //app.get('/here',function(req,res){
 //    res.send('Hello world');
 //});
+app.use('/v1/account', accountModule);
 
 app.get('/:username',function(req,res){
     console.log('here -> ' + req.params.username);

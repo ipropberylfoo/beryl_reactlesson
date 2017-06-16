@@ -4,7 +4,7 @@ var APP_DIR = path.resolve(__dirname, 'src/client/app');
 module.exports = {
     entry: "./src/client/public/index.jsx",
     output: {
-        filename: './src/client/app/bundle.js'
+        filename: './build/bundle.js'
     },
     devServer: {
      inline: true,
