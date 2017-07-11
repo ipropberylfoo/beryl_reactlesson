@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 
-class App extends React.Component {
+class Menu extends React.Component {
   render() {
     var name;
     if (this.props.username != null)
@@ -16,12 +16,11 @@ class App extends React.Component {
         <head>
         </head>
         <body>
-          <p>Hello {name}</p>
-          <div><a href="menu">Menu</a></div>
+          <p>Hello {name}, Menu Here</p>
         </body>
       </html>
     );
   }
 }
 
- module.exports = App;
+ module.exports = Menu;
