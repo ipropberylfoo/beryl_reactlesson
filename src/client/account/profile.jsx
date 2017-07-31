@@ -4,16 +4,18 @@ import {render} from 'react-dom';
 class Profile extends React.Component {
   render() {
 
-    var acc = this.props.account;
-
+    var acc = this.props.account.BankAccount;
+    console.log(acc);
     return (
       <html>
         <head></head>
         <body>
 
-          <h2>Welcome to Beryl Online Banking, {acc.Name}</h2>
+          <h2>Welcome to ABC Bank, {acc.Name}</h2>
+          <h4>Profile Page</h4>
 
           <table>
+            <tbody>
             <tr>
               <td>Account Id</td>
               <td>:</td>
@@ -29,6 +31,7 @@ class Profile extends React.Component {
               <td>:</td>
               <td>{acc.DOB}</td>
             </tr>
+            </tbody>
           </table>
         </body>
       </html>

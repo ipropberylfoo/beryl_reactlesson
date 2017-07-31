@@ -1,7 +1,14 @@
-{
-  "AccountId" : "0001",
-  "Name" : "William Lau",
-  "DOB" : "21/03/1980",
-  "SavingBalance" : "3000"
-
+{ "BankAccount" :
+    {
+      "AccountId" : "0001",
+      "Name" : "William Lau",
+      "DOB" : "21/03/1980",
+      "SavingBalance" : "3000",
+      "Account" : [
+        {"Type" : "Normal", "SubType" : "Saving", "Id" : "000100010001", "Balance" : 3000 },
+        {"Type" : "Loan", "SubType" : "Car Loan", "Id" : "000100010002", "Balance" : -30000 },
+        {"Type" : "CreditCard", "SubType" : "Visa Cash Rebate", "Id" : "0001433120", "Balance" : -30 },
+        {"Type" : "CreditCard", "SubType" : "Visa Cash Rebate", "Id" : "0001544321", "Balance" : -300 }
+      ]
+  }
 }

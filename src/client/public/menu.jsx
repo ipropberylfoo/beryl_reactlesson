@@ -3,22 +3,18 @@ import {render} from 'react-dom';
 
 class Menu extends React.Component {
   render() {
-    var name;
-    if (this.props.username != null)
-    {
-      name = this.props.username;
-    }
-    else{
-      name = 'World';
-    }
+    var acc = this.props.account;
+    console.log('here here -> ' + acc.AccountId);
     return (
-      <html>
-        <head>
-        </head>
-        <body>
-          <p>Hello {name}, Menu Here</p>
-        </body>
-      </html>
+      <div>
+          <ul id="nav">
+            <li><a href={'/v1/account/' + acc.AccountId}>Home</a></li>
+            <li><a href={'/v1/account/' + acc.AccountId + '/summary'}>Account</a></li>
+            <li><a href={'/v1/account/' + acc.AccountId + '/summary'}>Card Management</a></li>
+            <li><a href={'/v1/account/' + acc.AccountId + '/summary'}>Transfer</a></li>
+            <li><a href={'/v1/account/' + acc.AccountId + '/summary'}>Payment</a></li>
+        </ul>
+        </div>
     );
   }
 }

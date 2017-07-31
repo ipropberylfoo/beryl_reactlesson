@@ -8,6 +8,7 @@ var server = app.listen(3001,function(){
     console.log("We have started our server on port 3001");
 });
 var reactViews = require('express-react-views');
+var jsonfile = require('jsonfile');
 
 var accountModule  = require('../routes/account');
 var paymentModule  = require('../routes/payment');
@@ -27,15 +28,20 @@ app.set('views','./src/client');
 app.use('/v1/account', accountModule);
 app.use('/v1/payment', paymentModule);
 
-app.get('/user/:username',function(req,res){
-    console.log('here -> ' + req.params.username);
+app.get('/user/:userid',function(req,res){
+  var userid = req.params.userid;
+  console.log(userid);
+  var file = './src/database/' + userid + '.json';
+
+  jsonfile.readFile(file, function(err, obj) {
     res.render('./public/index.jsx', {
-      username : req.params.username
+      account : obj
     });
+  });
 });
-app.get('/',function(req,res){
-    res.render('./public/index.jsx');
-});
+// app.get('/',function(req,res){
+//     res.render('./public/index.jsx');
+// });
 app.get('/menu',function(req,res){
     res.render('./public/menu.jsx');
 });
